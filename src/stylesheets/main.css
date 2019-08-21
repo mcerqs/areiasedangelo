@@ -87,9 +87,13 @@ nav {
 }
 
 /* Structure of Layout */
+.team,
+.above-scroll {
+  background-color: #F0F0F0;
+}
+
 .above-scroll {
   height: 85vh;
-  background-color: #F0F0F0;
 }
 
 .occupation-grid {
