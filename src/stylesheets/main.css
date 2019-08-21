@@ -43,6 +43,7 @@ body {
 }
 
 /* Components UI */
+/* Button */
 .btn {
   color: #FFF;
   box-shadow: 0 0.167em 0.333em rgba(0, 0, 0, 0.16);
@@ -52,15 +53,7 @@ body {
   background-color: var(--highlight-color);
 }
 
-nav {
-  color: var(--primary-color, #FFF);
-  height: 4.063rem;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  background-color: var(--dark-color);
-}
-
+/* Card */
 .card {
   display: inline-block;
   font-size: 1.25rem;
@@ -86,6 +79,39 @@ nav {
   margin-bottom: 0.525em;
 }
 
+/* Form */
+label,
+input {
+  display: block;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+label + label {
+  margin-top: 35px;
+}
+
+input {
+  height: 45px;
+  border: 2px solid var(--dark-color);
+}
+
+input:focus {
+  border-color: var(--primary-color);
+}
+
+/* Nav */
+nav {
+  color: var(--primary-color, #FFF);
+  height: 4.063rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background-color: var(--dark-color);
+}
+
 /* Structure of Layout */
 .team,
 .above-scroll {
@@ -99,4 +125,17 @@ nav {
 .occupation-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+/* Rules mobile */
+@media (min-width: 1024px) {
+  body {
+    background-color: #9E191D;
+  }
+
+  input {
+    height: 50px;
+  }
 }
