@@ -33,12 +33,14 @@
         Sociedade de Advogados
       </h2>
       
-      <button class="btn">Conhecer</button>
+      <button class="btn"> Conhecer </button>
     </section>
 
-    <main>
-      <h1 class="txt-title"> Atuação </h1>
-      <h2 class="txt-subtitle"> Conheça nossas áreas de atuação. </h2>
+    <main class="container">
+      <header>
+        <h1 class="txt-title"> Atuação </h1>
+        <h2 class="txt-subtitle"> Conheça nossas áreas de atuação. </h2>
+      </header>
 
       <section class="occupation occupation-grid">
         <!-- Block 1 -->
@@ -114,21 +116,50 @@
           </p>
         </div>
       </section>
+    </main>
 
-      <section class="team">
+    <section class="team">
+      <header class="container">
         <h3 class="txt-title">Equipe</h3>
         <h4 class="txt-subtitle">Conheça nosso time.</h4>
+      </header>
+      
+      <section class=""></section>
+    </section>
+
+    <section class="container contact">
+      <header>
+        <h3 class="txt-title"> Entre em contato </h3>
+        <h4 class="txt-subtitle">Fale com a gente!</h4>
+      </header>
+
+      <section class="contact-details">
+        <form action="">
+          <label for="input">
+            Nome
+            <input type="text" id="input" placeholder="Nome aqui" required/>
+          </label>
+
+          <label for="input2">
+            E-mail
+            <input type="email" id="input2" placeholder="E-mail aqui" required/>
+          </label>
+    
+          <label for="textarea"> Mensagem </label>
+          <textarea name="" id="textarea" placeholder="Digite aqui" required></textarea>
+          
+          <br />
+
+          <button class="btn"> Enviar </button>
+        </form>
+
+        <div class="embedded-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d914.6433022789457!2d-46.6564467!3d-23.5118773!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef7e6a1b71843%3A0xf075a7303966138c!2sR.+Saguairu%2C+665+-+Casa+Verde%2C+S%C3%A3o+Paulo+-+SP%2C+02514-000!5e0!3m2!1spt-BR!2sbr!4v1566436511371!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
       </section>
+    </section>
 
-      <section class=""></section>
-
-      <h3 class="txt-title"> Entre em contato </h3>
-      <h4 class="txt-subtitle">Fale com a gente!</h4>
-
-      <section class=""></section>
-
-      <footer></footer>
-    </main>
+    <footer></footer>
 
     <script src="./src/js/main.js"></script>
   </body>

@@ -12,6 +12,7 @@
   --primary-color: #C0B283;
   --highlight-color: #9E191D;
   --dark-color: #212121;
+  --gray-color: #616161;
   --variable-color: #F5F5F5;
 }
 
@@ -43,13 +44,14 @@ body {
 }
 
 /* Components UI */
+
 /* Button */
 .btn {
   color: #FFF;
   box-shadow: 0 0.167em 0.333em rgba(0, 0, 0, 0.16);
   font-size: 1.125rem;
   text-transform: uppercase;
-  padding: 0.889em 1.667em;
+  padding: 0.789em 0.967em;
   background-color: var(--highlight-color);
 }
 
@@ -80,26 +82,42 @@ body {
 }
 
 /* Form */
+form input,
+form textarea {
+  width: 100%;
+}
+
 label,
 input {
   display: block;
 }
 
 label {
-  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 label + label {
   margin-top: 35px;
 }
 
-input {
-  height: 45px;
-  border: 2px solid var(--dark-color);
+label input,
+label + textarea {
+  margin-top: 5px;
+}
+
+input,
+textarea {
+  padding: .9em;
+  border: 1px solid var(--gray-color);
 }
 
 input:focus {
   border-color: var(--primary-color);
+}
+
+textarea {
+  margin-bottom: 35px;
 }
 
 /* Nav */
@@ -113,6 +131,18 @@ nav {
 }
 
 /* Structure of Layout */
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+header h1,
+header h2,
+header h3,
+header h4 {
+  text-align: center;
+}
+
 .team,
 .above-scroll {
   background-color: #F0F0F0;
@@ -127,14 +157,18 @@ nav {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.contact-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
+form,
+.embedded-map {
+  padding: 2em;
+}
 
 /* Rules mobile */
-@media (min-width: 1024px) {
-  body {
-    background-color: #9E191D;
-  }
-
+@media (max-width: 1024px) {
   input {
     height: 50px;
   }
