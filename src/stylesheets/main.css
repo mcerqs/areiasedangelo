@@ -15,11 +15,16 @@
   --gray-color: #616161;
   --variable-color: #F5F5F5;
 
+  --light-color: #FFF;
+
   --golden-primary: #BBA05D;
   --golden-secondary: #C0B283;
 
   --button-text-color: ;
   --button-bgcolor: ;
+
+  --footer-color: #424242;
+  --copyright-color: var(--gray-color);
 }
 
 /* Show tags */
@@ -75,9 +80,24 @@ header h4 {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.contact-details {
+.contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer {
+  color: var(--light-color, #FFF);
+  background-color: var(--footer-color);
+}
+
+.copyright {
+  text-align: center;
+  background-color: var(--copyright-color);
 }
 
 /*
@@ -90,7 +110,7 @@ header h4 {
  */
 
 .btn {
-  color: #FFF;
+  color: var(--light-color, #FFF);
   box-shadow: 0 0.167em 0.333em rgba(0, 0, 0, 0.16);
   font-size: 1.125rem;
   text-transform: uppercase;
