@@ -95,8 +95,13 @@ footer {
   background-color: var(--footer-color);
 }
 
+.footer-col {
+  padding: 4em 0;
+}
+
 .copyright {
   text-align: center;
+  padding: .8em 0;
   background-color: var(--copyright-color);
 }
 
@@ -110,12 +115,12 @@ footer {
  */
 
 .btn {
-  color: var(--light-color, #FFF);
-  box-shadow: 0 0.167em 0.333em rgba(0, 0, 0, 0.16);
+  color: var(--light-color, #333);
+  box-shadow: 0 0.200em 0.666em rgba(0, 0, 0, 0.22);
   font-size: 1.125rem;
   text-transform: uppercase;
   padding: 0.789em 0.967em;
-  background-color: var(--highlight-color);
+  background-color: var(--golden-primary);
 }
 
 
