@@ -1,4 +1,4 @@
-/* Basic reset */
+/* Reset */
 * {
   box-sizing: border-box;
   list-style: none;
@@ -14,6 +14,12 @@
   --dark-color: #212121;
   --gray-color: #616161;
   --variable-color: #F5F5F5;
+
+  --golden-primary: #BBA05D;
+  --golden-secondary: #C0B283;
+
+  --button-text-color: ;
+  --button-bgcolor: ;
 }
 
 /* Show tags */
@@ -21,7 +27,7 @@ nav, header, section, aside, main {
   display: block;
 }
 
-/* Standard */
+/* STRUCTURE OF LAYOUT - STANDARD */
 body {
   font-size: 16px;
 }
@@ -30,12 +36,12 @@ body {
   font-size: 2.625rem;
 }
 
-.txt-sub-highlight {
+.txtsub-highlight {
   font-size: 2rem;
 }
 
 .txt-title,
-.txt-subtitle {
+.txtsub-title {
   font-size: 1.625rem;
 }
 
@@ -43,9 +49,46 @@ body {
   text-transform: uppercase;
 }
 
-/* Components UI */
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
 
-/* Button */
+header h1,
+header h2,
+header h3,
+header h4 {
+  text-align: center;
+}
+
+.team,
+.above-scroll {
+  background-color: #F0F0F0;
+}
+
+.above-scroll {
+  height: 85vh;
+}
+
+.actuation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*
+  Components UI
+  
+  * Button
+  * Card
+  * FORM
+  * NAVBAR
+ */
+
 .btn {
   color: #FFF;
   box-shadow: 0 0.167em 0.333em rgba(0, 0, 0, 0.16);
@@ -55,7 +98,7 @@ body {
   background-color: var(--highlight-color);
 }
 
-/* Card */
+
 .card {
   display: inline-block;
   font-size: 1.25rem;
@@ -66,22 +109,22 @@ body {
 
 .card-icon {
   display: inline-block;
-  color: #FFF;
+  color: var(--golden-primary);
   font-size: 1rem;
-  height: 7em;width: 7em;
-  padding: 2em;
-  border-radius: 50%;
-  box-shadow: 0 0.167em 0.333em rgba(0, 0, 0, 0.16);
-  background-color: var(--highlight-color, #9E191D);
+  padding: 1em;
 }
 
 .card-title {
   text-transform: uppercase;
-  margin-top: 1.045em;
   margin-bottom: 0.525em;
 }
 
-/* Form */
+
+form,
+.embedded-map {
+  padding: 2em;
+}
+
 form input,
 form textarea {
   width: 100%;
@@ -120,7 +163,7 @@ textarea {
   margin-bottom: 35px;
 }
 
-/* Nav */
+
 nav {
   color: var(--primary-color, #FFF);
   height: 4.063rem;
@@ -130,44 +173,7 @@ nav {
   background-color: var(--dark-color);
 }
 
-/* Structure of Layout */
-.container {
-  width: 1024px;
-  margin: 0 auto;
-}
-
-header h1,
-header h2,
-header h3,
-header h4 {
-  text-align: center;
-}
-
-.team,
-.above-scroll {
-  background-color: #F0F0F0;
-}
-
-.above-scroll {
-  height: 85vh;
-}
-
-.occupation-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.contact-details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-form,
-.embedded-map {
-  padding: 2em;
-}
-
-/* Rules mobile */
+/* MOBILE */
 @media (max-width: 1024px) {
   input {
     height: 50px;
