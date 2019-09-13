@@ -6,6 +6,13 @@ var span = document.getElementsByClassName("close")[0];
 
 function showModal(e) {
   modal.style.display = "block";
+
+  console.log('Modal title: ', modal.firstElementChild.querySelector('h2'));
+
+  var title = modal.firstElementChild.querySelector('h2');
+
+  title.innerHTML = e.innerText;
+
   appendText();
 
   // var textContent = modal.firstElementChild.getElementsByClassName('text');
@@ -38,18 +45,10 @@ function appendText() {
   
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      // textContent = this.responseText;
-      
-      // console.log('CONTEUDO this.responseText: ', this.responseText);
-      // console.log('CONTEUDO textContent: ', textContent);
-    
       document.getElementById("textContent").innerHTML = this.responseText;
     }
   };
 
-  // xhttp.open("GET", "criminal.txt", true);
   xhttp.open("GET", pathContent, true);
   xhttp.send();
-
-  // return 'textContent';
 }
