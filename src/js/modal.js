@@ -4,24 +4,18 @@ var modal = document.getElementById("myModal");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-function showModal(e) {
-  modal.style.display = "block";
-
-  console.log('Modal title: ', modal.firstElementChild.querySelector('h2'));
-
+function showModal(e, namePath) {
   var title = modal.firstElementChild.querySelector('h2');
-
+  
+  modal.style.display = "block";
   title.innerHTML = e.innerText;
-
-  appendText();
-
-  // var textContent = modal.firstElementChild.getElementsByClassName('text');
-  // textContent[0].innerHTML = e.innerText;
-  // textContent[0].innerHTML = appendText();
-
+  
+  appendText(namePath);
+  
+  // TO DO
   console.log('Modal ', modal);
-  // console.log('Modal filho ', textContent);
   console.log('This ', e.innerText);
+  console.log('Modal title: ', modal.firstElementChild.querySelector('h2'));
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -36,10 +30,9 @@ window.onclick = function(event) {
   }
 }
 
-function appendText() {
-  var textContent = '';
-  
-  var pathContent = './static/criminal.txt';
+function appendText(nameFile) {
+
+  var pathContent = './static/'+nameFile+'.txt';
 
   var xhttp = new XMLHttpRequest();
   
