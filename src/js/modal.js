@@ -43,7 +43,7 @@ function appendText() {
       // console.log('CONTEUDO this.responseText: ', this.responseText);
       // console.log('CONTEUDO textContent: ', textContent);
     
-      document.getElementById("myContent").innerHTML = this.responseText;
+      document.getElementById("textContent").innerHTML = this.responseText;
     }
   };
 
